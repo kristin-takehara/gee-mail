@@ -2,17 +2,47 @@
 	<head>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
-    <script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <body>
+    <div class="container" id="main"></div>
+ 
+
+
+   <script>
       window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
+        for(var i = 0; i<geemails.length; i++){ 
+          var mailBox = document.createElement("div");
+          mailBox.className = "box";
+          main.appendChild(mailBox);
+
+          var mailBox2 = document.createElement("div");
+          mailBox.className = "box2";
+          main.appendChild(mailBox2);
+
+          var mailDate = document.createElement("li");
+          mailDate.className = "date1";
+          mailDate.innerHTML = geemails[i].date;
+          mailBox.appendChild(mailDate);
+
+          var mailSender = document.createElement("button");
+          mailSender.className = "sender1";
+          mailSender.innerHTML = geemails[i].sender;
+          mailBox.appendChild(mailSender);
+
+          var mailSubject = document.createElement("li");
+          mailSubject.className = "subject1()";
+          mailSubject.innerHTML = geemails[i].subject;
+          mailBox.appendChild(mailSubject); 
+
+          var mailBody = document.createElement("li");
+          mailBody.className = "body1";
+          mailBody.innerHTML = geemails[i].body;
+          mailBox2.appendChild(mailBody);
+
+      }
+    };   
     </script>
+
 	</head>
-	<body>
-		<div class="container" id="main">
-			Build Me!
-		</div>
 	</body>
 </html>
