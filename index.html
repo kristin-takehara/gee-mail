@@ -3,10 +3,9 @@
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
   <body>
     <div class="container" id="main"></div>
- 
-
 
    <script>
       window.onload = function(){
@@ -30,15 +29,26 @@
           mailBox.appendChild(mailSender);
 
           var mailSubject = document.createElement("li");
-          mailSubject.className = "subject1()";
+          mailSubject.className = "subject1";
           mailSubject.innerHTML = geemails[i].subject;
           mailBox.appendChild(mailSubject); 
 
           var mailBody = document.createElement("li");
           mailBody.className = "body1";
           mailBody.innerHTML = geemails[i].body;
+          document.getElementsByClassName("body1").onclick = function showMes() {
+            var x = document.getElementById('mailBody');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+          };
+
           mailBox2.appendChild(mailBody);
 
+
+          
       }
     };   
     </script>

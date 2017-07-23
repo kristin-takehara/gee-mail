@@ -16,13 +16,6 @@
   text-align: right;
 }
 
-.subject1{
-  font-family: 'Josefin Sans', sans-serif;
-  display: inline;
-  font-size: 18px;
-  text-align: center;
-}
-
 .sender1{
   font-family: 'Josefin Sans', sans-serif;
   text-align: left;
@@ -31,8 +24,17 @@
   display: inline;
 }
 
+.subject1{
+  font-family: 'Josefin Sans', sans-serif;
+  display: inline;
+  font-size: 18px;
+  text-align: absolute;
+}
+
+
 .body1{
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
     width: 100%;
     padding: 50px 0;
     text-align: absolute;
