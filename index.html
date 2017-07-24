@@ -36,21 +36,25 @@
           var mailBody = document.createElement("li");
           mailBody.className = "body1";
           mailBody.innerHTML = geemails[i].body;
-          document.getElementsByClassName("body1").onclick = function showMes() {
-            var x = document.getElementById('mailBody');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-          };
+
+    //       document.getElementsByClassName("body1").onclick = function showMes() {
+    //         var x = document.getElementById('mailBody');
+    // if (x.style.display === 'none') {
+    //     x.style.display = 'block';
+    // } else {
+    //     x.style.display = 'none';
+    // }
+    //       };
 
           mailBox2.appendChild(mailBody);
-
-
-          
-      }
-    };   
+    }
+      function getNewMessage() {
+    setInterval(function(){  alert(""); }, 3000);
+          mailBox2.appendChild(mailBody);
+    }    
+      
+    }; 
+      
     </script>
 
 	</head>
