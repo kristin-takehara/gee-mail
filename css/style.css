@@ -26,7 +26,7 @@
 
 .subject1{
   font-family: 'Josefin Sans', sans-serif;
-  display: inline;
+  /*display: inline;*/
   font-size: 18px;
   text-align: absolute;
 }
