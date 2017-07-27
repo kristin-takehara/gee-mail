@@ -5,8 +5,20 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
   <body>
-    <div class="container" id="main"></div>
-
+    <div class = "title">..:gee-mail:..</div>
+    <div>
+      <div class="stage">
+  <div class="envelope-wrapper">
+    <div class="envelope">
+      <img class="envelope-face envelope-front" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/91003/envelope-front.svg">
+      <img class="envelope-face envelope-back" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/91003/envelope-rear.svg">
+    </div>
+  </div>you've got mail
+</div>
+   </div> 
+    
+    <div class="container" id="main">INBOX
+    </div>
    <script>
       window.onload = function(){
         for(var i = 0; i<geemails.length; i++){ 
@@ -21,22 +33,26 @@
           var mailDate = document.createElement("li");
           mailDate.className = "date1";
           mailDate.innerHTML = geemails[i].date;
-          mailBox.appendChild(mailDate);
+          mailBox2.appendChild(mailDate);
 
-          var mailSender = document.createElement("button");
-          mailSender.className = "sender1";
-          mailSender.innerHTML = geemails[i].sender;
-          mailBox.appendChild(mailSender);
+          // var postLine = document.createElement("li");
+          // postLine.className = "mailStripe";
+          // mailD.appendChild(postLine);
 
           var mailSubject = document.createElement("li");
           mailSubject.className = "subject1";
           mailSubject.innerHTML = geemails[i].subject;
-          mailBox.appendChild(mailSubject); 
+          mailBox2.appendChild(mailSubject); 
+
+          var mailSender = document.createElement("li");
+          mailSender.className = "sender1";
+          mailSender.innerHTML = geemails[i].sender;
+          mailBox2.appendChild(mailSender);
 
           var mailBody = document.createElement("li");
           mailBody.className = "body1";
           mailBody.innerHTML = geemails[i].body;
-          mailBox2.appendChild(mailBody);
+          mailSender.appendChild(mailBody);
 }
 
           var pressButton = document.getElementsByClassName("sender1");
