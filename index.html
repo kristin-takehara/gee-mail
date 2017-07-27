@@ -37,13 +37,12 @@
           mailBody.className = "body1";
           mailBody.innerHTML = geemails[i].body;
           mailBox2.appendChild(mailBody);
-  }
+}
 
           var pressButton = document.getElementsByClassName("sender1");
         for(var i = 0; i<pressButton.length; i++){
   pressButton[i].addEventListener("click", showBody);
-  }
-
+}
 function showBody(){
   var mess = this.querySelectorAll(".body1")[0];
   if(mess.style.display === "none"){
@@ -52,8 +51,7 @@ function showBody(){
     mess.style.display = "none";
   }  
 }
-};    
-          
+}; 
 
 </script>
 
