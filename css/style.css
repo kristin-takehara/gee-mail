@@ -1,9 +1,9 @@
 
 .box{
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+  /*font-size: 20px;
   display: block;
-  border: 1px solid black;
+  border: 1px solid black;*/
 }
 
 .box2{
@@ -26,18 +26,17 @@
 
 .subject1{
   font-family: 'Josefin Sans', sans-serif;
-  /*display: inline;*/
   font-size: 18px;
   text-align: absolute;
 }
 
 
 .body1{
+    display: none;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
-    width: 100%;
-    padding: 50px 0;
+    /*width: 100%;
+    padding: 50px 0;*/
     text-align: absolute;
     background-color: lightblue;
-    margin-top:20px;
 }

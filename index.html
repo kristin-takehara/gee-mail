@@ -23,7 +23,7 @@
           mailDate.innerHTML = geemails[i].date;
           mailBox.appendChild(mailDate);
 
-          var mailSender = document.createElement("li");
+          var mailSender = document.createElement("button");
           mailSender.className = "sender1";
           mailSender.innerHTML = geemails[i].sender;
           mailBox.appendChild(mailSender);
@@ -36,27 +36,26 @@
           var mailBody = document.createElement("li");
           mailBody.className = "body1";
           mailBody.innerHTML = geemails[i].body;
-
-    //       mailBody.onclick = function() {
-    //         var x = document.getElementsByClassName('body1');
-    // if (x.style.display === "none") {
-    //     x.style.display = "block";
-    // } else {
-    //     x.style.display = "none";
-    // }
-    //   };
-
           mailBox2.appendChild(mailBody);
-    }
+  }
 
-      function getNewMessage() {
-    setInterval(function(){  alert(""); }, 3000);
-          mailBox2.appendChild(mailBody);
-    }    
-      
-    }; 
-      
-    </script>
+          var pressButton = document.getElementsByClassName("sender1");
+        for(var i = 0; i<pressButton.length; i++){
+  pressButton[i].addEventListener("click", showBody);
+  }
+
+function showBody(){
+  var mess = this.querySelectorAll(".body1")[0];
+  if(mess.style.display === "none"){
+    mess.style.display = "block";
+  }else{
+    mess.style.display = "none";
+  }  
+}
+};    
+          
+
+</script>
 
 	</head>
 	</body>
