@@ -4,13 +4,14 @@ body{
   cursor: url('../assets/Cute-Mail-Carrier-Bird.png'), auto;
 }
 .main{
+  color: gray;
   padding: 20px;
 }
 
 .title{
   color: white;
   font-size: 60px;
-  text-align: right;
+  text-align: center;
   padding: none;
   margin: 5px;
 }  
@@ -47,13 +48,6 @@ body{
   width: 100%;
 }
 
-/*.mailStripe{
-  background-image: repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, transparent 30px, transparent 50px, #83B3DB 50px, #84ADCB 80px, transparent 80px, transparent 100px);
-  padding: -200px;
-  /*background-color: #ffcccc;
-}*/
-
-
 .subject1{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
@@ -75,7 +69,7 @@ body{
   width: 100vw;
   height: 7vh;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   animation: whoosh-away 1.5s ease-in-out;
   animation-delay: 3.5s;

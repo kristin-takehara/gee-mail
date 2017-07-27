@@ -35,10 +35,6 @@
           mailDate.innerHTML = geemails[i].date;
           mailBox2.appendChild(mailDate);
 
-          // var postLine = document.createElement("li");
-          // postLine.className = "mailStripe";
-          // mailD.appendChild(postLine);
-
           var mailSubject = document.createElement("li");
           mailSubject.className = "subject1";
           mailSubject.innerHTML = geemails[i].subject;
@@ -56,7 +52,7 @@
 }
 
           var pressButton = document.getElementsByClassName("sender1");
-        for(var i = 0; i<pressButton.length; i++){
+        for(var i = 0; i<pressButton.length; i++) {
   pressButton[i].addEventListener("click", showBody);
 }
 function showBody(){
@@ -67,6 +63,17 @@ function showBody(){
     mess.style.display = "none";
   }  
 }
+
+// function newMes() {
+//         for(var i = 0; i<getNewMessage.length; i++){ 
+
+//   var loadNewMes = "";
+//   loadNewMes = setInterval(getNewMessage(), 3000);
+//   mailBox2.appendChild(loadNewMes);
+//   }
+// }
+        
+
 }; 
 
 </script>
