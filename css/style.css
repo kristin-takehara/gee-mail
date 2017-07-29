@@ -2,7 +2,7 @@ body{
   background-color: lightblue;
   font-family: 'Josefin Sans', sans-serif;
   cursor: url('../assets/Cute-Mail-Carrier-Bird.png'), auto;
-  padding: 30px;
+  padding: 20px;
   border: 5px dashed white;
   border-radius: 20px;
 }
