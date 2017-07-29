@@ -73,20 +73,6 @@ function newBox(){
   newObjSub.innerHTML = insObj.subject;
   main.appendChild(newObjSub);
 
-//   var newObjSend = document.createElement("li");
-//   newObjSend.className = "sender1";
-//   newObjSend.innerHTML = insObj.sender;
-//   newObjSend.addEventListener("click", showBody);
-//   function showBody(){
-//   var mess = this.querySelectorAll(".body1")[0];
-//   if(mess.style.display === "none"){
-//     mess.style.display = "block";
-//   }else{
-//     mess.style.display = "none";
-//   }  
-// }
-//   main.appendChild(newObjSend);
-
   var newObjBody = document.createElement("li");
   newObjBody.className = "body1";
   newObjBody.innerHTML = insObj.body;
@@ -133,6 +119,9 @@ setInterval(newBox, 2000);
 <body>
     <div class = "title">..:gee-mail:..</div>
     <div>
+
+    <img id="postStamp" src="assets/postal-stamp-hi.png" alt=""></img>
+
       <div class="stage">
   <div class="envelope-wrapper">
     <div class="envelope">
@@ -141,8 +130,6 @@ setInterval(newBox, 2000);
     </div>
   </div> you've got mail
 </div>
-
-
 
     <div id = "count">
     </div>

@@ -3,13 +3,13 @@ body{
   font-family: 'Josefin Sans', sans-serif;
   cursor: url('../assets/Cute-Mail-Carrier-Bird.png'), auto;
   padding: 30px;
-  border: 2px dashed white;
-    border-radius: 5px;
+  border: 3px dashed white;
+  border-radius: 5px;
 }
 
 #count{
   font-size: 20px;
-  text-align: right;
+  text-align: left;
   padding-right: 40px;
   padding-bottom: 40px;
 }
@@ -22,10 +22,17 @@ body{
 }
 
 #ct-envelope{
-  float: right;
+  float: left;
   width: 50px;
   margin-top: -70px;
-  margin-right: 25px;
+  margin-left: 67px;
+}
+
+#postStamp{
+  float: right;
+  margin-top: -103px;
+  margin-right: 285px;
+  z-index: -1;
 }
 
 .title{
@@ -33,7 +40,7 @@ body{
   font-size: 60px;
   text-align: center;
   padding: none;
-  margin: 5px;
+  margin-top: 51px;
 }  
 
 .box{
@@ -67,6 +74,7 @@ body{
 }
 
 .subject1{
+  background-color: white;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   text-align: center;
