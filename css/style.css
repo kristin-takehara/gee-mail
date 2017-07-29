@@ -2,10 +2,30 @@ body{
   background-color: lightblue;
   font-family: 'Josefin Sans', sans-serif;
   cursor: url('../assets/Cute-Mail-Carrier-Bird.png'), auto;
+  padding: 30px;
+  border: 2px dashed white;
+    border-radius: 5px;
 }
-.main{
-  color: gray;
-  padding: 20px;
+
+#count{
+  font-size: 20px;
+  text-align: right;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+#mesCt:before{
+  content: "INBOX";
+  padding-right: 20px;
+  color: white;
+
+}
+
+#ct-envelope{
+  float: right;
+  width: 50px;
+  margin-top: -70px;
+  margin-right: 25px;
 }
 
 .title{
@@ -23,8 +43,6 @@ body{
 .box2{
     font-family: 'Josefin Sans', sans-serif;
     list-style-type: none;
-    border: 2px dashed white;
-    border-radius: 5px;
 }
 
 .date1{

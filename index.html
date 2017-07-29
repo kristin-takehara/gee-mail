@@ -4,21 +4,7 @@
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
-  <body>
-    <div class = "title">..:gee-mail:..</div>
-    <div>
-      <div class="stage">
-  <div class="envelope-wrapper">
-    <div class="envelope">
-      <img class="envelope-face envelope-front" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/91003/envelope-front.svg">
-      <img class="envelope-face envelope-back" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/91003/envelope-rear.svg">
-    </div>
-  </div>you've got mail
-</div>
-   </div> 
-    
-    <div class="container" id="main">INBOX
-    </div>
+  
    <script>
       window.onload = function(){
         for(var i = 0; i<geemails.length; i++){ 
@@ -50,11 +36,17 @@
           mailBody.innerHTML = geemails[i].body;
           mailSender.appendChild(mailBody);
 }
+          var getCt = document.createElement("div");
+          getCt.id = "mesCt";
+          getCt.innerHTML = geemails.length;
+          count.appendChild(getCt);
+          console.log(getCt);
 
           var pressButton = document.getElementsByClassName("sender1");
         for(var i = 0; i<pressButton.length; i++) {
   pressButton[i].addEventListener("click", showBody);
 }
+
 function showBody(){
   var mess = this.querySelectorAll(".body1")[0];
   if(mess.style.display === "none"){
@@ -64,19 +56,99 @@ function showBody(){
   }  
 }
 
-// function newMes() {
-//         for(var i = 0; i<getNewMessage.length; i++){ 
 
-//   var loadNewMes = "";
-//   loadNewMes = setInterval(getNewMessage(), 3000);
-//   mailBox2.appendChild(loadNewMes);
-//   }
+// get new message
+
+function newBox(){
+  
+  var insObj = getNewMessage();
+  // console.log(insObjDate);
+  var newObjDate = document.createElement("li");
+  newObjDate.className = "date1";
+  newObjDate.innerHTML = insObj.date;
+  main.appendChild(newObjDate);
+
+  var newObjSub = document.createElement("li");
+  newObjSub.className = "subject1";
+  newObjSub.innerHTML = insObj.subject;
+  main.appendChild(newObjSub);
+
+//   var newObjSend = document.createElement("li");
+//   newObjSend.className = "sender1";
+//   newObjSend.innerHTML = insObj.sender;
+//   newObjSend.addEventListener("click", showBody);
+//   function showBody(){
+//   var mess = this.querySelectorAll(".body1")[0];
+//   if(mess.style.display === "none"){
+//     mess.style.display = "block";
+//   }else{
+//     mess.style.display = "none";
+//   }  
 // }
-        
+//   main.appendChild(newObjSend);
 
-}; 
+  var newObjBody = document.createElement("li");
+  newObjBody.className = "body1";
+  newObjBody.innerHTML = insObj.body;
+  main.appendChild(newObjBody);
+
+  var newObjSend = document.createElement("li");
+  newObjSend.className = "sender1";
+  newObjSend.innerHTML = insObj.sender;
+  newObjSend.addEventListener("click", showBody);
+  main.appendChild(newObjSend);
+
+function showBody(){
+  var mess = this.querySelectorAll(".body1")[0];
+  if(mess.style.display === "none"){
+    mess.style.display = "block";
+  }else{
+    mess.style.display = "none";
+  }  
+}
+  
+
+getCt.innerHTML++;  
+
+// add event listener  
+
+  // var pressButton = document.getElementsByClassName("sender1");
+    // newObjSend.addEventListener("click", showBody);
+
+// function showBody(){
+//   var mess = this.querySelectorAll(".body1")[0];
+//   if(mess.style.display === "none"){
+//     mess.style.display = "block";
+//   }else{
+//     mess.style.display = "none";
+//   }  
+// }
+}
+
+setInterval(newBox, 2000);
+
+};
 
 </script>
+<body>
+    <div class = "title">..:gee-mail:..</div>
+    <div>
+      <div class="stage">
+  <div class="envelope-wrapper">
+    <div class="envelope">
+      <img class="envelope-face envelope-front" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/91003/envelope-front.svg">
+      <img class="envelope-face envelope-back" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/91003/envelope-rear.svg">
+    </div>
+  </div> you've got mail
+</div>
+
+
+
+    <div id = "count">
+    </div>
+    <img id = "ct-envelope" src="assets/contact_envelope.png" alt="">
+    <div class="container" id="main">
+    </div>
 
 	</head>
 	</body>
