@@ -81,25 +81,11 @@ function newBox(){
   var newObjSend = document.createElement("li");
   newObjSend.className = "sender1";
   newObjSend.innerHTML = insObj.sender;
-  newObjSend.addEventListener("click", showBody);
   main.appendChild(newObjSend);
-
-function showBody(){
-  var mess = this.querySelectorAll(".body1")[0];
-  if(mess.style.display === "none"){
-    mess.style.display = "block";
-  }else{
-    mess.style.display = "none";
-  }  
-}
   
-
-getCt.innerHTML++;  
-
 // add event listener  
-
-  // var pressButton = document.getElementsByClassName("sender1");
-    // newObjSend.addEventListener("click", showBody);
+//   var pressButton = document.getElementsByClassName("sender1");
+//   pressButton.addEventListener("click", showBody);
 
 // function showBody(){
 //   var mess = this.querySelectorAll(".body1")[0];
@@ -109,6 +95,10 @@ getCt.innerHTML++;
 //     mess.style.display = "none";
 //   }  
 // }
+  
+
+getCt.innerHTML++;  
+
 }
 
 setInterval(newBox, 2000);
