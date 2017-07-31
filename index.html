@@ -83,21 +83,19 @@ function newBox(){
   newObjSend.innerHTML = insObj.sender;
   main.appendChild(newObjSend);
 
+getCt.innerHTML++; 
 // add event listener  
-//   var pressButton = document.getElementsByClassName("sender1");
-//   pressButton[i].addEventListener("click", showBody);
+document.getElementsByClassName("sender1").addEventListener("click", showBody);
 
-// function showBody(){
-//   var mess = this.querySelectorAll(".body1")[0];
-//   if(mess.style.display === "none"){
-//     mess.style.display = "block";
-//   }else{
-//     mess.style.display = "none";
-//   }  
-// }
-  
-
-getCt.innerHTML++;  
+function showBody(){
+  document.getElementsByClassName("body1").innerHTML = insObj.body;
+  if(mess.style.display === "none"){
+    mess.style.display = "block";
+  }else{
+    mess.style.display = "none";
+  }  
+}
+   
 
 }
 
