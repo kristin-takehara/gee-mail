@@ -7,6 +7,10 @@ body{
   border-radius: 20px;
 }
 
+#hihi{
+  text-align: right;
+  color: white;
+}
 #count{
   font-size: 20px;
   text-align: left;
@@ -162,4 +166,9 @@ body{
 .envelope-back{
   transform: rotateY(180deg);
   backface-visibility: hidden;
+}
+
+#signed{
+  text-align: right;
+  color: white;
 }
