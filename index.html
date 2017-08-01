@@ -43,8 +43,8 @@
           console.log(getCt);
 
           var pressButton = document.getElementsByClassName("sender1");
-        for(var i = 0; i<pressButton.length; i++) {
-  pressButton[i].addEventListener("click", showBody);
+          for(var i = 0; i < pressButton.length; i++){
+          pressButton[i].addEventListener("click", showBody);
 }
 
 function showBody(){
@@ -73,29 +73,34 @@ function newBox(){
   newObjSub.innerHTML = insObj.subject;
   main.appendChild(newObjSub);
 
-  var newObjBody = document.createElement("li");
-  newObjBody.className = "body1";
-  newObjBody.innerHTML = insObj.body;
-  main.appendChild(newObjBody);
-
   var newObjSend = document.createElement("li");
   newObjSend.className = "sender1";
   newObjSend.innerHTML = insObj.sender;
   main.appendChild(newObjSend);
 
-getCt.innerHTML++; 
+  var newObjBody = document.createElement("li");
+  newObjBody.className = "body1";
+  newObjBody.innerHTML = insObj.body;
+  newObjSend.appendChild(newObjBody);
+
+getCt.innerHTML++;  
+
 // add event listener  
-document.getElementsByClassName("sender1").addEventListener("click", showBody);
+
+var pressButton = document.getElementsByClassName("sender1");
+for(var i = 0; i < pressButton.length; i++){
+pressButton[i].addEventListener("click", showBody);
+}
 
 function showBody(){
-  document.getElementsByClassName("body1").innerHTML = insObj.body;
+  var mess = this.querySelectorAll(".body1")[0];
   if(mess.style.display === "none"){
     mess.style.display = "block";
   }else{
     mess.style.display = "none";
   }  
-}
-   
+}  
+  
 
 }
 
